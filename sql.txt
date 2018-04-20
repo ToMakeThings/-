@@ -1,0 +1,42 @@
+select * from 表名
+insert into 表名（表字段）values（表字段值）
+update 表名 set 表字段=表字段值  where  满足的条件
+delete form 表名 where 满足的条件
+
+select * from 表名  limit 5    获取前几条数据
+select * form 表名 order by 表字段   根据字段进行排序
+select top 50 percent * from 表名   选取前面50%的记录
+select * from 表名 where 表字段 like ‘G%’or‘%G’or‘%G%’ 模糊查询
+select * from 表名  where 表字段 not like ‘%G%’  不包含G的选择
+select * from 表名  where 表字段 in（‘表字段’,‘表字段’）
+select * from 表名  where 表字段 between  1 and 20  选取介于1和20之间所有的选项
+select 表字段 as 表字段别名 form 表名
+select 表字段，表字段 form 表名 inner join 表字段 on 条件
+select 表字段 form 表名 union select 表字段 from 表名 order by 表字段    从两个表中选取不同的字段
+
+复制所有的列插入到新表中：
+SELECT *
+INTO newtable [IN externaldb]
+FROM table1;          
+
+相比select * from  有差别
+
+INSERT INTO table2
+(column_name(s))
+SELECT column_name(s)
+FROM table1;
+
+select into  将一个表的数据插入一个新表
+inset  into select 将一个表中的数据插入一个已存在的表  
+
+CREATE DATABASE dbname;  用于创建数据库。
+
+
+CREATE TABLE 语句用于创建数据库中的表。
+CREATE TABLE table_name
+(
+column_name1 data_type(size),
+column_name2 data_type(size),
+column_name3 data_type(size),
+....
+);

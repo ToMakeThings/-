@@ -1,0 +1,20 @@
+报错可能是 没有全局安装 代码为    npm vue-cli -g     用 node  -V 表示是否安装成功
+http://blog.csdn.net/u012582402/article/details/76697775
+
+https://taylorchen709.github.io/vue-admin/   element ui  演示
+
+项目中端口冲突 config/index.js   dev 更改端口
+http://www.jb51.net/article/118693.htm   网址介绍
+
+npm i element-ui -S  安装element ui
+
+
+
+结束vue多余进程的方法。
+window+R 输入 cmd   进去后输入 netstat -ano   查看端口 如 “8080”  获取 PID 值。打开资源管理器 看进程 查找 PID为  PID值的进程 点击结束进程。 找不到PID显示位置 则点击查看获取PID。
+
+ctrl+c 跳出程序
+cnpm install && cnpm run dev    下载资源加运行项目
+
+app.vue里面有一个这样的script 引入    import Hello  from ‘./components/Hello’
+components里面 写一些vue 文件。

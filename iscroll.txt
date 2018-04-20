@@ -1,0 +1,29 @@
+
+iscroll插件使用过程中 点击问题失效的解决方法    iscroll4  和 iscroll5 都可以解决
+
+
+
+//判断终端
+function iScrollClick(){
+	if (/iPhone|iPad|iPod|Macintosh/i.test(navigator.userAgent)) return false;
+	if (/Chrome/i.test(navigator.userAgent)) return (/Android/i.test(navigator.userAgent));
+	if (/Silk/i.test(navigator.userAgent)) return false;
+	if (/Android/i.test(navigator.userAgent)) {
+	   var s=navigator.userAgent.substr(navigator.userAgent.indexOf('Android')+8,3);
+	   return parseFloat(s[0]+s[3]) < 44 ? false : true
+    }
+}
+
+
+var rightMyScroll = new IScroll('.foods-wrapper',{
+	 click:iScrollClick(), //调用判断函数    这里要的值是true  或fasle  true的话 点击生效
+	 /* scrollbars: true,//有滚动条 
+     mouseWheel: true,//允许滑轮滚动 */
+	 fadeScrollbars: true//滚动时显示滚动条，默认影藏，并且是淡出淡入效果 */
+ });
+
+在用js和html模范做饿了吗购物车的时候 遇见左右物品联动 的问题   
+scrollToElement(el, time, offsetX, offsetY, easing)  用这个iscroll的方法 滚动到指定元素的位置
+使用方法  rightMyScroll.scrollToElement();   rightMyScroll 为设置的  var rightMyScroll = new IScroll(）
+实现思路有两种  一种为让 滚动条 滚动指定距离 也就是 元素距离顶部的位置  用 $("").offset()  和 $("").position()  结合使用获取距离顶部的距离  来实现  。这种方法在使用 iscroll 插件后不适用  留作候选方法。
+第二种方法为 用  iscroll中的 scrollTo  或 scrollBy  或 scrollToElement

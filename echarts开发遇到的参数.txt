@@ -1,0 +1,6 @@
+minInterval 设为1 就是整数   (y轴只显示整数,写在yAxis参数项中）
+触摸或点击图标后显示数据  可以添加 name 增加文字显示；
+ axisPointer: {
+                    type: 'shadow' // 默认为直线，可选为：'line' |'shadow'|'cross'
+                }
+（这是控制划过图表时 是以阴影线显示 还是类似 地图定位 及其他显示）

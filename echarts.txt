@@ -1,0 +1,20 @@
+option   中的  grid 属性 里面有  (如下)  来控制图形距离左右的距离
+grid : {
+	left : '3%',
+	right : '4%',
+	bottom : '3%',
+	containLabel : true
+	},  
+
+如果发现图形 左右边的字体超出范围 可以将他们倾斜显示  如下代码 （x轴的数据倾斜显示，间隔为0的时候全部显示）
+xAxis: [
+		        {
+		             
+		            axisLabel: {
+		                interval: 0,  //间隔为0全部显示
+		                 rotate: 30   //倾斜 30度
+		                },
+		           
+		        }
+		    ],
+ 

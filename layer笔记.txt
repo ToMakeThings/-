@@ -1,0 +1,24 @@
+        
+//单个使用
+layer.open({
+  skin: 'demo-class'
+});
+//全局使用。即所有弹出层都默认采用，但是单个配置skin的优先级更高
+
+======================================配置全局layer属性
+layer.config({
+  skin: 'demo-class'
+})
+
+====================================
+area - 宽高      area['500px','300px']
+offset - 坐标
+closeBtn - 关闭按钮
+shade - 遮罩
+shadeClose - 是否点击遮罩关闭
+
+==================================关闭遮罩
+var index = layer.open({
+  content: 'test'
+});
+//拿到的index是一个重要的凭据，它是诸如layer.close(index)等方法的必传参数。    

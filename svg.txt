@@ -1,0 +1,11 @@
+<script type="text/javascript" src="http://at.alicdn.com/t/font_386052_rob0iyoleb0dlsor.js"></script> 
+
+引用到html中
+<svg class="icon" aria-hidden="true">  
+               <use xlink:href="#icon-left"></use>  
+</svg>
+
+通过标签引用图标  通过class 设置大小和颜色
+把xlink:href=" "中的值改成你选择的图标代码。接着，可以通过 class 样式来改变图标。
+
+unicode引用

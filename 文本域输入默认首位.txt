@@ -1,0 +1,8 @@
+function s(e,a)
+{
+	 if ( e && e.preventDefault ){ e.preventDefault();}else{window.event.returnValue=false;}
+	 a.focus();
+}
+
+
+在文本域添加事件   onmousedown="s(event,this)"

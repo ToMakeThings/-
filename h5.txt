@@ -1,0 +1,74 @@
+css3 反选伪类选择器：not的用法
+.nav li:not(:last-child) {
+   border-bottom: 10px solid #000;
+} 
+语法：
+E:not(){ sRules }
+说明：
+匹配不含有s选择符的元素E。
+css3 反选伪类选择器：not的用法
+ 
+javascript的return false只会阻止默认行为，而是用jQuery的话则既阻止默认行为又防止对象冒泡。
+
+阻止事件冒泡
+window.event.calcelbubble=true;
+stopPropagation();
+阻止默认事件
+proventDefault;
+window.enent.returnValue=false;
+
+
+ES6 symbol类型
+
+
+function使用详细说明
+1、一种是声明式。
+
+而声明式会导致函数提升，function会被解释器优先编译。即我们用声明式写函数，可以在任何区域声明，不会影响我们调用。
+
+function XXX(){}
+一种是函数表达式
+
+函数表达式我们经常使用，而函数表达式中的function则不会出现函数提升。而是JS解释器逐行解释，到了这一句才会解释。因此如果调用在函数表达式之前，则会调用失败。
+
+var k = function(){}
+
+fn1();
+function fn1(){}//可以正常调用
+
+fn2();
+var fn2 = function(){}//无法调用
+
+OK，下面进入正题，对函数表达式加上()，是可以直接调用的 
+但是如果是对声明式的后部加上()则是会被编译器忽略。
+
+ var fn2 = function(){}();//对，就是这样
+function fn1(){}();//会被忽略
+
+而平常的function(){}则是一种声明式，如果加上()括号后，则会被编译器认为是函数表达式，（加上+-号都可以），从而可以用()来直接调用
+
+（function fn1(){}）();
+
+
+显示图片   img｛max-width:100%;height:auto｝
+jq js 相互转化   js->jq   如：var v=document.getElementById("v"); //DOM对象  var $v=$(v); //jQuery对象     
+                 jq->js   如：var $v =$("#v") ; //jQuery对象  var v=$v[0]; //DOM对象
+
+在Jquery里面，我们可以看到两种写法:$(function(){}) 和$(document).ready(function(){})
+
+这两个方法的效果都是一样的，都是在dom文档树加载完之后执行一个函数（注意，这里面的文档树加载完不代表全部文件加载完）。
+
+而window.onload是在dom文档树加载完和所有文件加载完之后执行一个函数。也就是说$(document).ready要比window.onload先执行。
+
+比较日期
+ var timeString1=$(this).attr("predate")+" "+$(this).attr("begin");    //predate=2018-1-30  begin=11::15
+				 var timeZh = new Date(timeString1.replace(/-/g, '/'));
+				 var timeStamp1 = timeZh.getTime();
+				 var timeZh2= new Date();
+				 var timeStamp2=timeZh2.getTime();
+				 if(timeStamp1>timeStamp2){}
+
+
+比如一个学生选课系统中，学生，课程，选课记录这三个都是我们所要开发的功能的业务实体；用Model定义的类能够为我们提供直接修改和获取业务实体数据属性的功能，也能够通过简单明了的api直接与服务器进行同步，比如前面用到的fetch，save，还有没用到的destroy等；View这个模块可以让我们来封装页面中某个独立完整部分的UI功能，它往往会与Model模块进行关联，并且配合模板一起完成UI的更新，通过监听Model实例的变化来重新渲染html，通过自身注册的事件将UI的变化同步到Model实例，它就像一个控制器，同步数据与界面UI的实时变化。除了Model跟View之外，Backbone的底层还有一个sync模块，封装了数据同步时异步请求管理的功能，
+
+大多数情况下,document.location和location.href是相同的，但是，当存在服务器重定向时，document.location包含的是已经装载的URL，而location.href包含的则是原始请求的文档的URL. 
